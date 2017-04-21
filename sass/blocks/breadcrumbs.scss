@@ -1,0 +1,43 @@
+.breadcrumbs {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  &__wrapper {
+    @include container;
+  }
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    display: flex;
+  }
+  li {
+    list-style: none;
+    margin-right: 10px;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  li:last-child {
+    a {
+      color: $purple;
+    }
+  }
+}
+
+@media #{$tablet-widths} {
+  .breadcrumbs {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media #{$desktop-widths} {
+  .breadcrumbs {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+}

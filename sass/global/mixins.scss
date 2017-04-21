@@ -2,10 +2,10 @@
 	width: 314px;
 	margin: 0 auto;
 
-	   @media #{$tablet-widths} {
-	    width: 711px;
-	   }
-	  @media #{$desktop-widths} {
-	    width: 1005px;
-	  }
+    @media #{$tablet-widths} {
+      width: 711px;
+    }
+    @media #{$desktop-widths} {
+      width: 1005px;
+    }
 }

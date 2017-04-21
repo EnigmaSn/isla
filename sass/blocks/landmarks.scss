@@ -1,0 +1,100 @@
+.landmarks {
+  &__wrapper {
+    @include container;
+    position: relative;
+  }
+  h2 {
+    display: none;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    span {
+      box-sizing: border-box;
+      display: block;
+      width: 87px;
+      height: 50px;
+      background: $purple;
+      color: $white;
+      text-align: center;
+      vertical-align: bottom;
+      padding: 15px 20px;
+      border-radius: 50%;
+      margin-right: 23px;
+    }
+  }
+  &__item-open {
+    img {
+      display: none;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+}
+@media #{$tablet-widths} {
+  .landmarks {
+    position: relative;
+    &::after {
+      content:"";
+      display: table;
+      width: 100%;
+      height: 350px;
+      //background: red;
+      background-image: url("../img/lines-tablet.png");
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: -80px;
+      z-index: -1;
+    }
+    h2 {
+      color: $purple;
+      font-size: 25px;
+      display: block;
+    }
+    &__item {
+      span {
+        position: absolute;
+        width: 75px;
+        height: 41px;
+        padding: 12px;
+        right: 0;
+      }
+    }
+    &__item:nth-child(2) {
+      span {
+        position: absolute;
+        left: 0px;
+        top: 90px;
+      }
+    }
+    &__item:nth-child(3) {
+      span {
+        position: absolute;
+        left: 50px;
+        top: 140px;
+      }
+    }
+    &__item:nth-child(4) {
+      span {
+        position: absolute;
+        left: 140px;
+        top: 165px;
+      }
+    }
+    &__item-open {
+      display: none;
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+  .landmarks {
+
+  }
+}
