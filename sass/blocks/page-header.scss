@@ -1,7 +1,6 @@
 .page-header {
   background: $purple;
   min-height: 73px;
-  margin-top: 33px;
   display: flex;
   &__wrapper {
     @include container;
@@ -48,7 +47,15 @@
 
 @media #{$tablet-widths}  {
   .page-header {
+    min-height: 86px;
+    &__logo {
+      margin-top: 10px;
+    }
     &__nav {
+      img {
+        margin-right: 2px;
+        margin-top: 3px;
+      }
       ul {
         flex-wrap: wrap;
         height: 80px;
@@ -61,6 +68,7 @@
 
 @media #{$desktop-widths} {
   .page-header {
+    margin-top: 33px;
 
     &__wrapper {
       align-items: center;

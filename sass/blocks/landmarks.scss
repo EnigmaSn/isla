@@ -39,6 +39,7 @@
 @media #{$tablet-widths} {
   .landmarks {
     position: relative;
+    min-height: 350px;
     &::after {
       content:"";
       display: table;
@@ -49,46 +50,110 @@
       background-size: cover;
       background-position: center;
       position: absolute;
-      top: -80px;
+      top: -88px;
+      left: 1px;
       z-index: -1;
     }
     h2 {
       color: $purple;
       font-size: 25px;
       display: block;
+      margin-top: 50px;
+    }
+    &__item-open {
+      display: none;
     }
     &__item {
       span {
-        position: absolute;
+        position: relative;
         width: 75px;
         height: 41px;
         padding: 12px;
         right: 0;
+        background-color: $note;
+      }
+    }
+    &__item:hover {
+      span {
+        background-color: $purple;
+      }
+      .landmarks__item-open {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        top: 80px;
+        left: -50px;
+        z-index: 1;
+
+        img {
+          display: block;
+          margin-right: 13px;
+          padding: 5px;
+          border: 1px solid $purple;
+          border-radius: 19px 0 19px 0;
+        }
+        p {
+          min-width: 200px;
+          color: $purple;
+          font-size: 18px;
+          line-height: 26px;
+        }
       }
     }
     &__item:nth-child(2) {
-      span {
-        position: absolute;
-        left: 0px;
-        top: 90px;
-      }
+      position: absolute;
+      left: 2px;
+      top: 80px;
     }
     &__item:nth-child(3) {
-      span {
-        position: absolute;
-        left: 50px;
-        top: 140px;
-      }
+      position: absolute;
+      left: 52px;
+      top: 122px;
     }
     &__item:nth-child(4) {
-      span {
-        position: absolute;
-        left: 140px;
-        top: 165px;
-      }
+      position: absolute;
+      left: 133px;
+      top: 149px;
     }
-    &__item-open {
-      display: none;
+    &__item:nth-child(5) {
+      position: absolute;
+      left: 136px;
+      top: 70px;
+    }
+    &__item:nth-child(6) {
+      position: absolute;
+      left: 208px;
+      top: 105px;
+    }
+    &__item:nth-child(7) {
+      position: absolute;
+      left: 290px;
+      top: 125px;
+    }
+    &__item:nth-child(8) {
+      position: absolute;
+      left: 315px;
+      top: 62px;
+    }
+    &__item:nth-child(9) {
+      position: absolute;
+      left: 388px;
+      top: 106px;
+    }
+    &__item:nth-child(10) {
+      position: absolute;
+      left: 462px;
+      top: 65px;
+    }
+    &__item:nth-child(11) {
+      position: absolute;
+      left: 554px;
+      top: 85px;
+    }
+    &__item:nth-child(12) {
+      position: absolute;
+      left: 639px;
+      top: 38px;
     }
   }
 }
